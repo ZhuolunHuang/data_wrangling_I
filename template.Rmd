@@ -95,16 +95,18 @@ fellow_df = read_excel("data/LotR_words.xlsx",range = "B3:D6")
 pulse_df = read_sas("data/public_pulse_data.sas7bdat")
 ```
 
-## why to never use "read_csv"
-```{r}
+## why to never use "read.csv"
+
+`read.csv` doesn't give 'tibble' and that's really bad
+```{r,eval = FALSE}
 litters_df_base = read.csv("data/FAS_litters.csv")
+## read.csv is different read_csv
 ```
 
 ## how do I export data 
+there is a good day!
 
-there is a good day
 ```{r}
 write_csv(fellow_df,"data/fellowship_words.csv")
-
 ```
 
